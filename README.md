@@ -1,4 +1,4 @@
-# DataCleanUp
+# Data CleanUp
 Data Cleanup
-Enter Table No in the Header
-System will display multiple records in line page to cleanup
+Enter Table No in the Header.
+System will display records in subpage.
