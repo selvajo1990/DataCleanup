@@ -1,4 +1,4 @@
-page 50102 "Data CleanUp Document"
+page 90001 "Data CleanUp Document"
 {
     PageType = Document;
     ApplicationArea = All;

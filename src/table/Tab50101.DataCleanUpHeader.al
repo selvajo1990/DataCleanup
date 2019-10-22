@@ -1,4 +1,4 @@
-table 50101 "Data CleanUp Header"
+table 90000 "Data CleanUp Header"
 {
     DataClassification = CustomerContent;
     DataCaptionFields = "Table ID", "Table Name";
