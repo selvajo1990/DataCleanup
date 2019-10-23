@@ -1,11 +1,17 @@
-table 90000 "Data CleanUp Header"
+table 90000 "Data Clean Up"
 {
     DataClassification = CustomerContent;
-    DataCaptionFields = "Table ID", "Table Name";
 
     fields
     {
-        field(1; "Table ID"; Integer)
+        field(1; "Primary Key"; Code[20])
+        {
+            Caption = 'Entry No.';
+            DataClassification = CustomerContent;
+            Editable = false;
+        }
+
+        field(21; "Table ID"; Integer)
         {
             Caption = 'Table ID';
             DataClassification = CustomerContent;
@@ -18,7 +24,7 @@ table 90000 "Data CleanUp Header"
                     "Table Name" := AllObj."Object Name";
             end;
         }
-        field(2; "Table Name"; Text[50])
+        field(22; "Table Name"; Text[30])
         {
             Caption = 'Table Name';
             Editable = false;
@@ -28,20 +34,9 @@ table 90000 "Data CleanUp Header"
 
     keys
     {
-        key(PK; "Table ID")
+        key(PK; "Primary Key")
         {
             Clustered = true;
-        }
-    }
-    fieldgroups
-    {
-        fieldgroup(Dropdown; "Table ID", "Table Name")
-        {
-
-        }
-        fieldgroup(Brick; "Table ID", "Table Name")
-        {
-
         }
     }
 }
