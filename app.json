@@ -1,7 +1,7 @@
 {
   "id": "340de49d-ade2-4d69-9025-4005a690d8f0",
-  "name": "ALProject2",
-  "publisher": "Default publisher",
+  "name": "Data Clean Up",
+  "publisher": "Santhosh & Selva",
   "version": "1.0.0.0",
   "brief": "",
   "description": "",
@@ -9,7 +9,7 @@
   "EULA": "",
   "help": "",
   "url": "",
-  "logo": "",
+  "logo": "./res/data-cleanup.png",
   "dependencies": [
     {
       "appId": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
