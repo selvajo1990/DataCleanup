@@ -1,4 +1,4 @@
-page 90001 "Data Clean Up Subpage"
+page 60001 "Data Clean Up Subpage"
 {
     PageType = ListPart;
     UsageCategory = None;
@@ -959,13 +959,13 @@ page 90001 "Data Clean Up Subpage"
 
         Clear(Rec);
         Rec.DeleteAll();
-        RecRef.FindSet(false, false);
-        repeat
-            Counter += 1;
-            Rec.Init();
-            Rec."Entry No." := Counter;
-            Rec."Record ID" := RecRef.RecordId();
-            Rec.Insert();
-        until RecRef.Next() = 0;
+        if RecRef.FindSet() then
+            repeat
+                Counter += 1;
+                Rec.Init();
+                Rec."Entry No." := Counter;
+                Rec."Record ID" := RecRef.RecordId();
+                Rec.Insert();
+            until RecRef.Next() = 0;
     end;
 }

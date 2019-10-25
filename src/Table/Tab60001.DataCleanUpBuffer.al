@@ -1,4 +1,4 @@
-table 90001 "Data Clean Up Buffer"
+table 60001 "Data Clean Up Buffer"
 {
     Caption = 'Data Clean Up Buffer';
     DataClassification = CustomerContent;
@@ -33,5 +33,4 @@ table 90001 "Data Clean Up Buffer"
         RecRef.Get("Record ID");
         RecRef.Delete(true);
     end;
-
 }

@@ -1,4 +1,4 @@
-table 90000 "Data Clean Up"
+table 60000 "Data Clean Up"
 {
     DataClassification = CustomerContent;
 

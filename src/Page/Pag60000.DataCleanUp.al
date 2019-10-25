@@ -1,4 +1,4 @@
-page 90000 "Data Clean Up"
+page 60000 "Data Clean Up"
 {
     PageType = Document;
     ApplicationArea = All;
@@ -34,8 +34,9 @@ page 90000 "Data Clean Up"
 
     trigger OnOpenPage()
     begin
-        if Delete() then
-            Insert();
+        if Get() then
+            Delete();
+        Insert();
     end;
 
     var
@@ -58,12 +59,12 @@ page 90000 "Data Clean Up"
         FieldInfo.SetRange(TableNo, TableNoIn);
         FieldInfo.SetRange(Enabled, true);
         FieldInfo.SetRange(ObsoleteState, FieldInfo.ObsoleteState::No);
-        FieldInfo.FindSet();
-        repeat
-            MatrixColumnCaptions[Counter] := FieldInfo."Field Caption";
-            MatrixColumnFieldNo[Counter] := FieldInfo."No.";
-            Counter += 1; // no. of field
-        until FieldInfo.Next() = 0;
+        IF FieldInfo.FindSet() then
+            repeat
+                MatrixColumnCaptions[Counter] := FieldInfo."Field Caption";
+                MatrixColumnFieldNo[Counter] := FieldInfo."No.";
+                Counter += 1; // no. of field
+            until FieldInfo.Next() = 0;
 
         RecRef.Open(TableNoIn);
         if RecRef.Count() = 0 then
