@@ -35,5 +35,6 @@
   "contextSensitiveHelpUrl": "https://ALProject2.com/help/",
   "showMyCode": true,
   "runtime": "4.0",
-  "features": ["TranslationFile"]
+  "features": ["TranslationFile"],
+  "target": "Cloud"
 }
